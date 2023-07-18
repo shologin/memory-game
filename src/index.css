@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap");
+
+body,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  background: #333;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+}
+
+.cards {
+  width: max-content;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 16px;
+  margin: 48px auto;
+}
+
+.card {
+  height: 130px;
+  background: url("./Assets/card-back.png");
+  border: 3px solid rgb(19, 23, 43);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.special {
+  height: 130px;
+  border: 3px solid rgb(19, 23, 43);
+  border-radius: 10px;
+  cursor: pointer;
+  background: url("./Assets/card-back.png");
+}
