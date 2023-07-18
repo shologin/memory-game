@@ -1,0 +1,16 @@
+.cards-lvl2 {
+  width: max-content;
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  gap: 16px;
+  margin: 48px auto;
+}
+
+.card-lvl2 {
+  height: 100px;
+  border: 3px solid rgb(51, 37, 1);
+  border-radius: 10px;
+  cursor: pointer;
+  background: url("../Assets/card-back-lvl2.png");
+  background-size: cover;
+}
