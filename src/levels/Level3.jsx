@@ -99,7 +99,7 @@ export default function Level3() {
 
   return (
     <div className="game">
-      <h2>Level 3</h2>
+      <h2 className="heading-h2">Level 3</h2>
       <div className="cards-lvl3"></div>
     </div>
   );

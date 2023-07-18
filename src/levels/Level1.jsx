@@ -1,11 +1,10 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Styles/level2-style.css";
 
-export default function Level2() {
+export default function Level1() {
   const navigate = useNavigate();
   useEffect(() => {
-    const cards = document.querySelector(".cards-lvl2");
+    const cards = document.querySelector(".cards");
     const colors = [
       { background: 'url("src/Assets/deadpool-icon.png") maroon' },
       { background: 'url("src/Assets/hulk-icon.png") lime' },
@@ -15,8 +14,6 @@ export default function Level2() {
       { background: 'url("src/Assets/venom-icon.png") dimgray' },
       { background: 'url("src/Assets/wolverine-icon.png") khaki' },
       { background: 'url("src/Assets/spiderman-icon.png") white' },
-      { background: 'url("src/Assets/thanos-icon.png") indigo' },
-      { background: 'url("src/Assets/hammer-icon.png") silver' },
     ];
     const colorsPicker = [...colors, ...colors];
     const cardsCount = colorsPicker.length;
@@ -29,7 +26,7 @@ export default function Level2() {
     // Create card
     function createCard(color) {
       const card = document.createElement("div");
-      card.classList.add("card-lvl2");
+      card.classList.add("card");
       card.setAttribute("data-color", color);
       card.setAttribute("data-revealed", "false");
 
@@ -40,7 +37,7 @@ export default function Level2() {
         }
 
         card.style.background = color;
-        card.style.backgroundSize = "60px";
+        card.style.backgroundSize = "80px";
         card.style.backgroundRepeat = "no-repeat";
         card.style.backgroundPosition = "center";
 
@@ -58,8 +55,8 @@ export default function Level2() {
           revealedCount += 2;
 
           if (revealedCount === cardsCount) {
-            alert("Level passed. Welcome to the level 3");
-            navigate("/level-3");
+            alert("Level passed. Welcome to the level 2");
+            navigate("/level-2");
           }
 
           return;
@@ -98,8 +95,8 @@ export default function Level2() {
 
   return (
     <div className="game">
-      <h2 className="heading-h2">Level 2</h2>
-      <div className="cards-lvl2"></div>
+      <h2 className="heading-h2">Level 1</h2>
+      <div className="cards"></div>
     </div>
   );
 }

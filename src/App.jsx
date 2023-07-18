@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Game from "./components/Game";
+import Level1 from "./levels/Level1";
 import Level2 from "./levels/Level2";
 import Level3 from "./levels/Level3";
 
@@ -14,6 +15,7 @@ function App() {
         <main>
           <Routes>
             <Route index element={<Game />} />
+            <Route path="level-1" element={<Level1 />} />
             <Route path="level-2" element={<Level2 />} />
             <Route path="level-3" element={<Level3 />} />
           </Routes>
