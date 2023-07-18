@@ -29,14 +29,6 @@ h3 {
 
 .card {
   height: 130px;
-  background: url("./Assets/card-back.png");
-  border: 3px solid rgb(19, 23, 43);
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.special {
-  height: 130px;
   border: 3px solid rgb(19, 23, 43);
   border-radius: 10px;
   cursor: pointer;
