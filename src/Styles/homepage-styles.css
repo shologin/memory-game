@@ -52,6 +52,7 @@
 
 .homepage-contact-github:hover {
   color: #4b5563;
+  text-decoration: underline;
 }
 
 .homepage-contact-repo a {
@@ -63,4 +64,5 @@
 
 .homepage-contact-repo:hover {
   color: goldenrod;
+  text-decoration: underline;
 }

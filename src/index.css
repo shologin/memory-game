@@ -33,7 +33,7 @@ h3 {
   background: #374151;
   color: #f9fafb;
 }
-
+/* styles for level 1 */
 .cards {
   width: max-content;
   display: grid;
@@ -49,6 +49,7 @@ h3 {
   cursor: pointer;
   background: url("./Assets/card-back.png");
 }
+/* ----------------------- */
 
 .heading-h2 {
   color: #f3f4f6;

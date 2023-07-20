@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "../Styles/homepage-styles.css";
 
-export default function Game() {
+export default function Homepage() {
   const navigate = useNavigate();
   return (
     <div className="game homepage">
@@ -31,7 +31,7 @@ export default function Game() {
           </a>
         </div>
         <div className="homepage-contact-repo">
-          <a href="#" target="_blank" rel="noopener nofollower noreferrer">
+          <a href="https://github.com/shologin/memory-game" target="_blank" rel="noopener nofollower noreferrer">
             <svg fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" width="30">
               <path
                 strokeLinecap="round"
