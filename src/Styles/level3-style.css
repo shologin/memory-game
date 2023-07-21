@@ -3,7 +3,8 @@
   display: grid;
   grid-template-columns: repeat(4, 60px);
   gap: 10px;
-  margin: 48px auto;
+  margin: 48px auto 0 auto;
+  padding-bottom: 15px;
 }
 
 .card-lvl3 {

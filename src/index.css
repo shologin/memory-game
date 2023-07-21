@@ -29,12 +29,21 @@ h3 {
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 80px;
   background: #374151;
   color: #f9fafb;
 }
 
-.heading-h2 {
+.header h3 {
+  margin-right: 30px;
+}
+
+.game-level-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 20px 0 5px;
   color: #f3f4f6;
 }
 
@@ -63,6 +72,10 @@ h3 {
 
   .card {
     height: 130px;
+  }
+
+  .game-level-heading {
+    margin: 20px 30px 0 30px;
   }
 }
 

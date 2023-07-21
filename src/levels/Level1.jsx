@@ -32,7 +32,10 @@ export default function Level1() {
 
   return (
     <div className="game">
-      <h2 className="heading-h2">Level 1</h2>
+      <div className="game-level-heading">
+        <h2>Level 1</h2>
+        <h2>10 moves</h2>
+      </div>
       <div className="cards"></div>
     </div>
   );

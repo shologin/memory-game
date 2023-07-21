@@ -37,7 +37,7 @@ export default function Level2() {
 
   return (
     <div className="game">
-      <h2 className="heading-h2">Level 2</h2>
+      <h2 className="game-level-number">Level 2</h2>
       <div className="cards-lvl2"></div>
     </div>
   );
