@@ -33,17 +33,22 @@ h3 {
   background: #374151;
   color: #f9fafb;
 }
+
+.heading-h2 {
+  color: #f3f4f6;
+}
+
 /* styles for level 1 */
 .cards {
   width: max-content;
   display: grid;
-  grid-template-columns: repeat(4, 100px);
+  grid-template-columns: repeat(4, 60px);
   gap: 16px;
   margin: 20px auto;
 }
 
 .card {
-  height: 130px;
+  height: 80px;
   border: 3px solid rgb(19, 23, 43);
   border-radius: 10px;
   cursor: pointer;
@@ -51,6 +56,22 @@ h3 {
 }
 /* ----------------------- */
 
-.heading-h2 {
-  color: #f3f4f6;
+@media screen and (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(4, 100px);
+  }
+
+  .card {
+    height: 130px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 767px) {
+  .cards {
+    grid-template-columns: repeat(4, 80px);
+  }
+
+  .card {
+    height: 100px;
+  }
 }

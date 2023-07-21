@@ -1,15 +1,37 @@
 .cards-lvl3 {
   width: max-content;
   display: grid;
-  grid-template-columns: repeat(6, 80px);
-  gap: 16px;
+  grid-template-columns: repeat(4, 60px);
+  gap: 10px;
   margin: 48px auto;
 }
 
 .card-lvl3 {
-  height: 100px;
+  height: 80px;
   border: 3px solid rgb(51, 37, 1);
   border-radius: 10px;
   cursor: pointer;
   background: url("../Assets/card-back.png");
+}
+
+@media screen and (min-width: 768px) {
+  .cards-lvl3 {
+    grid-template-columns: repeat(6, 80px);
+    gap: 16px;
+  }
+
+  .card-lvl3 {
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 767px) {
+  .cards-lvl3 {
+    grid-template-columns: repeat(4, 60px);
+    gap: 16px;
+  }
+
+  .card-lvl3 {
+    height: 80px;
+  }
 }
