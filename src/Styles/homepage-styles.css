@@ -7,10 +7,11 @@
 
 .homepage-title {
   margin: 20px 0;
+  text-align: center;
 }
 
 .homepage-description {
-  padding: 0 80px;
+  padding: 0 20px;
   margin: 30px 0;
 }
 
@@ -40,7 +41,7 @@
 
 .homepage-contacts {
   display: flex;
-  gap: 150px;
+  gap: 50px;
 }
 
 .homepage-contact-github {
@@ -65,4 +66,14 @@
 .homepage-contact-repo:hover {
   color: goldenrod;
   text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .homepage-description {
+    padding: 0 80px;
+  }
+
+  .homepage-contacts {
+    gap: 150px;
+  }
 }
