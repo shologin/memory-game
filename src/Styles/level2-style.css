@@ -1,15 +1,35 @@
 .cards-lvl2 {
   width: max-content;
   display: grid;
-  grid-template-columns: repeat(5, 80px);
+  grid-template-columns: repeat(4, 60px);
   gap: 16px;
   margin: 48px auto;
 }
 
 .card-lvl2 {
-  height: 100px;
+  height: 80px;
   border: 3px solid rgb(19, 53, 31);
   border-radius: 10px;
   cursor: pointer;
   background: url("../Assets/card-back.png");
+}
+
+@media screen and (min-width: 768px) {
+  .cards-lvl2 {
+    grid-template-columns: repeat(5, 80px);
+  }
+
+  .card-lvl2 {
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 767px) {
+  .cards-lvl2 {
+    grid-template-columns: repeat(4, 80px);
+  }
+
+  .card-lvl2 {
+    height: 100px;
+  }
 }
