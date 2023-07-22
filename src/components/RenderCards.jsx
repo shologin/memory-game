@@ -1,8 +1,12 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { moveMade, moveSet } from "../features/moveSlice";
 
 export default function RenderCards({ colors, cardClass, cardsClass, currentLevel }) {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const numOfMoves = useSelector((state) => state.moves.numOfMoves);
 
   useEffect(() => {
     const cards = document.querySelector(`.${cardsClass}`);
@@ -45,8 +49,10 @@ export default function RenderCards({ colors, cardClass, cardsClass, currentLeve
           awaitingEndOfMove = false;
           activeCard = null;
           revealedCount += 2;
+          dispatch(moveMade());
 
           if (revealedCount === cardsCount) {
+            dispatch(moveSet(`lvl-${currentLevel}`));
             alert(`Level passed. Welcome to the level ${nextLevel}`);
             navigate(`/level-${nextLevel}`);
           }
@@ -69,6 +75,7 @@ export default function RenderCards({ colors, cardClass, cardsClass, currentLeve
 
           awaitingEndOfMove = false;
           activeCard = null;
+          dispatch(moveMade());
         }, 1000);
       });
 
@@ -89,7 +96,8 @@ export default function RenderCards({ colors, cardClass, cardsClass, currentLeve
     <div className="render-cards">
       <div className="game-level-heading">
         <h2>Level {currentLevel}</h2>
-        <h2>10 moves</h2>
+        <button onClick={() => dispatch(moveMade())}>Click me!</button>
+        <h2>{numOfMoves} moves</h2>
       </div>
       <div className={cardsClass}></div>
     </div>
