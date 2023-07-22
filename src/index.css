@@ -36,8 +36,17 @@ h4 {
   color: #f9fafb;
 }
 
-.header h3 {
-  margin-right: 30px;
+.header-clear-stats {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.header-clear-stats:hover {
+  text-decoration: underline;
+  color: #a3a3a3;
 }
 
 .game-level-heading {

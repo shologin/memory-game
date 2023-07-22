@@ -13,7 +13,6 @@ const moveSlice = createSlice({
     },
     moveSet: (state, actions) => {
       const hightRecord = localStorage.getItem(actions.payload);
-      console.log(hightRecord, actions.payload);
       if (!hightRecord || state.numOfMoves < hightRecord) {
         localStorage.setItem(actions.payload, state.numOfMoves);
       } else null;
