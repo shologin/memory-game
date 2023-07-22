@@ -1,12 +1,11 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function RenderCards({ colors, cardClass, currentLevel }) {
+export default function RenderCards({ colors, cardClass, cardsClass, currentLevel }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const cards = document.querySelector(".cards");
-
+    const cards = document.querySelector(`.${cardsClass}`);
     const nextLevel = (currentLevel + 1).toString();
     const colorsPicker = [...colors, ...colors];
     const cardsCount = colorsPicker.length;
@@ -89,10 +88,10 @@ export default function RenderCards({ colors, cardClass, currentLevel }) {
   return (
     <div className="render-cards">
       <div className="game-level-heading">
-        <h2>Level 1</h2>
+        <h2>Level {currentLevel}</h2>
         <h2>10 moves</h2>
       </div>
-      <div className="cards"></div>
+      <div className={cardsClass}></div>
     </div>
   );
 }

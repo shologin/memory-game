@@ -1,7 +1,5 @@
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import "../Styles/level2-style.css";
-import useRender from "../components/useRender";
+import RenderCards from "../components/RenderCards";
 
 // import icons
 import deadpoolIcon from "../Assets/deadpool-icon.png";
@@ -16,29 +14,22 @@ import thanosIcon from "../Assets/thanos-icon.png";
 import hammerIcon from "../Assets/hammer-icon.png";
 
 export default function Level2() {
-  const navigate = useNavigate();
-  useEffect(() => {
-    const cards = document.querySelector(".cards-lvl2");
-    const colors = [
-      { background: `url(${deadpoolIcon}) maroon` },
-      { background: `url(${hulkIcon}) lime` },
-      { background: `url(${ironmanIcon}) gold` },
-      { background: `url(${blackpantherIcon}) purple` },
-      { background: `url(${captainamericaIcon}) tomato` },
-      { background: `url(${venomIcon}) dimgray` },
-      { background: `url(${wolverineIcon}) khaki` },
-      { background: `url(${spidermanIcon}) white` },
-      { background: `url(${thanosIcon}) indigo` },
-      { background: `url(${hammerIcon}) silver` },
-    ];
-
-    useRender(cards, colors, "card-lvl2", 2, navigate);
-  }, []);
+  const colors = [
+    { background: `url(${deadpoolIcon}) maroon` },
+    { background: `url(${hulkIcon}) lime` },
+    { background: `url(${ironmanIcon}) gold` },
+    { background: `url(${blackpantherIcon}) purple` },
+    { background: `url(${captainamericaIcon}) tomato` },
+    { background: `url(${venomIcon}) dimgray` },
+    { background: `url(${wolverineIcon}) khaki` },
+    { background: `url(${spidermanIcon}) white` },
+    { background: `url(${thanosIcon}) indigo` },
+    { background: `url(${hammerIcon}) silver` },
+  ];
 
   return (
     <div className="game">
-      <h2 className="game-level-number">Level 2</h2>
-      <div className="cards-lvl2"></div>
+      <RenderCards colors={colors} cardClass="card-lvl2" cardsClass="cards-lvl2" currentLevel={2} />
     </div>
   );
 }

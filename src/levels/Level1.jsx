@@ -24,7 +24,7 @@ export default function Level1() {
 
   return (
     <div className="game">
-      <RenderCards colors={colors} cardClass="card" currentLevel={1} />
+      <RenderCards colors={colors} cardClass="card" cardsClass="cards" currentLevel={1} />
     </div>
   );
 }

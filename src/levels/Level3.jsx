@@ -1,7 +1,5 @@
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import "../Styles/level3-style.css";
-import useRender from "../components/useRender";
+import RenderCards from "../components/RenderCards";
 
 // import icons
 import deadpoolIcon from "../Assets/deadpool-icon.png";
@@ -18,31 +16,24 @@ import grootIcon from "../Assets/groot-icon.png";
 import antmanIcon from "../Assets/antman-icon.png";
 
 export default function Level3() {
-  const navigate = useNavigate();
-  useEffect(() => {
-    const cards = document.querySelector(".cards-lvl3");
-    const colors = [
-      { background: `url(${deadpoolIcon}) maroon` },
-      { background: `url(${hulkIcon}) lime` },
-      { background: `url(${ironmanIcon}) gold` },
-      { background: `url(${blackpantherIcon}) purple` },
-      { background: `url(${captainamericaIcon}) tomato` },
-      { background: `url(${venomIcon}) dimgray` },
-      { background: `url(${wolverineIcon}) khaki` },
-      { background: `url(${spidermanIcon}) white` },
-      { background: `url(${thanosIcon}) indigo` },
-      { background: `url(${hammerIcon}) silver` },
-      { background: `url(${grootIcon}) olivedrab` },
-      { background: `url(${antmanIcon}) powderblue` },
-    ];
-
-    useRender(cards, colors, "card-lvl3", 3, navigate);
-  }, []);
+  const colors = [
+    { background: `url(${deadpoolIcon}) maroon` },
+    { background: `url(${hulkIcon}) lime` },
+    { background: `url(${ironmanIcon}) gold` },
+    { background: `url(${blackpantherIcon}) purple` },
+    { background: `url(${captainamericaIcon}) tomato` },
+    { background: `url(${venomIcon}) dimgray` },
+    { background: `url(${wolverineIcon}) khaki` },
+    { background: `url(${spidermanIcon}) white` },
+    { background: `url(${thanosIcon}) indigo` },
+    { background: `url(${hammerIcon}) silver` },
+    { background: `url(${grootIcon}) olivedrab` },
+    { background: `url(${antmanIcon}) powderblue` },
+  ];
 
   return (
     <div className="game">
-      <h2 className="game-level-number">Level 3</h2>
-      <div className="cards-lvl3"></div>
+      <RenderCards colors={colors} cardClass="card-lvl3" cardsClass="cards-lvl3" currentLevel={3} />
     </div>
   );
 }
