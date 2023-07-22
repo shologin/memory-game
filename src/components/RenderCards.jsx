@@ -9,6 +9,8 @@ export default function RenderCards({ colors, cardClass, cardsClass, currentLeve
   const numOfMoves = useSelector((state) => state.moves.numOfMoves);
   const dispatch = useDispatch();
 
+  const bestScore = localStorage.getItem(`lvl-${currentLevel}`);
+
   useEffect(() => {
     const cards = document.querySelector(`.${cardsClass}`);
     const nextLevel = (currentLevel + 1).toString();
@@ -98,7 +100,10 @@ export default function RenderCards({ colors, cardClass, cardsClass, currentLeve
       <ResetMoves />
       <div className="game-level-heading">
         <h2>Level {currentLevel}</h2>
-        <h2>{numOfMoves} moves</h2>
+        <div>
+          <h2>{numOfMoves} moves</h2>
+          {bestScore && <h4 className="game-best-score">Best {bestScore}</h4>}
+        </div>
       </div>
       <div className={cardsClass}></div>
     </div>
