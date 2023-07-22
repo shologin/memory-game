@@ -12,7 +12,11 @@ const moveSlice = createSlice({
       state.numOfMoves += 1;
     },
     moveSet: (state, actions) => {
-      localStorage.setItem(actions.payload, state.numOfMoves);
+      const hightRecord = localStorage.getItem(actions.payload);
+      console.log(hightRecord, actions.payload);
+      if (!hightRecord || state.numOfMoves < hightRecord) {
+        localStorage.setItem(actions.payload, state.numOfMoves);
+      } else null;
     },
     moveClearCurrent: (state) => {
       state.numOfMoves = 0;
