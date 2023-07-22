@@ -13,7 +13,6 @@ const moveSlice = createSlice({
     },
     moveSet: (state, actions) => {
       localStorage.setItem(actions.payload, state.numOfMoves);
-      state.numOfMoves = 0;
     },
     moveClearCurrent: (state) => {
       state.numOfMoves = 0;

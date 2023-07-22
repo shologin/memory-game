@@ -1,10 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import "../Styles/homepage-styles.css";
+import ResetMoves from "../features/ResetMoves";
 
 export default function Homepage() {
   const navigate = useNavigate();
   return (
     <div className="game homepage">
+      <ResetMoves />
       <h1 className="homepage-title">Welcome to the MEMORY GAME</h1>
       <p className="homepage-description">
         The game is intended to improve your memory and attention. You can track your stats right in the application. Be sure that

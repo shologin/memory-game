@@ -2,11 +2,12 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { moveMade, moveSet } from "../features/moveSlice";
+import ResetMoves from "../features/ResetMoves";
 
 export default function RenderCards({ colors, cardClass, cardsClass, currentLevel }) {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const numOfMoves = useSelector((state) => state.moves.numOfMoves);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const cards = document.querySelector(`.${cardsClass}`);
@@ -94,9 +95,9 @@ export default function RenderCards({ colors, cardClass, cardsClass, currentLeve
 
   return (
     <div className="render-cards">
+      <ResetMoves />
       <div className="game-level-heading">
         <h2>Level {currentLevel}</h2>
-        <button onClick={() => dispatch(moveMade())}>Click me!</button>
         <h2>{numOfMoves} moves</h2>
       </div>
       <div className={cardsClass}></div>
