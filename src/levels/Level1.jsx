@@ -1,4 +1,4 @@
-import RenderCards from "../components/RenderCards";
+import RenderCards from "../features/RenderCards";
 
 // import icons
 import deadpoolIcon from "../Assets/deadpool-icon.png";

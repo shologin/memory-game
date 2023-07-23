@@ -1,5 +1,5 @@
 import "../Styles/level3-style.css";
-import RenderCards from "../components/RenderCards";
+import RenderCards from "../features/RenderCards";
 
 // import icons
 import deadpoolIcon from "../Assets/deadpool-icon.png";
@@ -33,7 +33,7 @@ export default function Level3() {
 
   return (
     <div className="game">
-      <RenderCards colors={colors} cardClass="card-lvl3" cardsClass="cards-lvl3" currentLevel={3} />
+      <RenderCards colors={colors} cardClass="card-lvl3" cardsClass="cards-lvl3" currentLevel={3} isLastLevel={true} />
     </div>
   );
 }

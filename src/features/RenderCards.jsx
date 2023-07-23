@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { moveMade, moveSet } from "../features/moveSlice";
-import ResetMoves from "../features/ResetMoves";
+import { moveMade, moveSet } from "./moveSlice";
+import ResetMoves from "./ResetMoves";
 
-export default function RenderCards({ colors, cardClass, cardsClass, currentLevel }) {
+export default function RenderCards({ colors, cardClass, cardsClass, currentLevel, isLastLevel }) {
   const navigate = useNavigate();
   const numOfMoves = useSelector((state) => state.moves.numOfMoves);
   const dispatch = useDispatch();
@@ -56,8 +56,12 @@ export default function RenderCards({ colors, cardClass, cardsClass, currentLeve
 
           if (revealedCount === cardsCount) {
             dispatch(moveSet(`lvl-${currentLevel}`));
-            alert(`Level passed. Welcome to the level ${nextLevel}`);
-            navigate(`/level-${nextLevel}`);
+            if (!isLastLevel) {
+              alert(`Level passed. Welcome to the level ${nextLevel}`);
+              navigate(`/level-${nextLevel}`);
+            } else {
+              alert("Congratulations! You passed the game.");
+            }
           }
 
           return;

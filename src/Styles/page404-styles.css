@@ -1,0 +1,17 @@
+.page-404-title {
+  margin: 40px 20px;
+}
+
+.page-404-description {
+  padding: 0 20px;
+}
+
+.page-404-description a {
+  color: #4c64ac;
+}
+
+.img-404 {
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+}

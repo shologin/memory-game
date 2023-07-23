@@ -17,7 +17,7 @@ export default function Homepage() {
         <li>The cards have a pictures on one side and each picture appears on two cards.</li>
         <li>The game starts with all the cards face down and player turn over two cards.</li>
         <li>If two cards have the same picture, they remain revealed, otherwise they turn face down again.</li>
-        <li>The goal is to reval all the cards in as little as possible moves. </li>
+        <li>The goal is to reveal all the cards in as little as possible moves. </li>
         <li>Don't cheat!</li>
       </ul>
       <button className="homepage-button" onClick={() => navigate("/level-1")}>
