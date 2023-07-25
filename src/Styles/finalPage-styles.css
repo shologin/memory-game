@@ -1,0 +1,36 @@
+.final-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.final-page h1 {
+  color: goldenrod;
+}
+
+.final-page h1,
+.final-page h2 {
+  margin-bottom: 20px;
+}
+
+.winner-img {
+  width: 400px;
+  display: block;
+}
+
+.final-page-description {
+  width: 90%;
+}
+
+.final-page-contact-repo a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.final-page-contact-repo:hover {
+  color: goldenrod;
+  text-decoration: underline;
+}

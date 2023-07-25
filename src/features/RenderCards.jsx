@@ -60,7 +60,7 @@ export default function RenderCards({ colors, cardClass, cardsClass, currentLeve
               alert(`Level passed. Welcome to the level ${nextLevel}`);
               navigate(`/level-${nextLevel}`);
             } else {
-              alert("Congratulations! You passed the game.");
+              navigate(`/end`);
             }
           }
 

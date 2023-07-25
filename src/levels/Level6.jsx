@@ -45,7 +45,7 @@ export default function Level6() {
 
   return (
     <div className="game">
-      <RenderCards colors={colors} cardClass="card-lvl6" cardsClass="cards-lvl6" currentLevel={6} />
+      <RenderCards colors={colors} cardClass="card-lvl6" cardsClass="cards-lvl6" currentLevel={6} isLastLevel={true} />
     </div>
   );
 }
