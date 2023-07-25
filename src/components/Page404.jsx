@@ -1,6 +1,8 @@
 import "../Styles/page404-styles.css";
 import { Link } from "react-router-dom";
 
+import image404 from "../Assets/404-image.png";
+
 export default function Page404() {
   return (
     <div className="page-404">
@@ -8,7 +10,7 @@ export default function Page404() {
       <h3 className="page-404-description">
         You can hang around or you can return to the <Link to="/">Homepage</Link>
       </h3>
-      <img src="src/Assets/404-image.png" alt="404" className="img-404" />
+      <img src={image404} alt="404" className="img-404" />
     </div>
   );
 }

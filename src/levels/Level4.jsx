@@ -1,4 +1,4 @@
-import "../Styles/level3-style.css";
+import "../Styles/level4-style.css";
 import RenderCards from "../features/RenderCards";
 
 // import icons
@@ -14,8 +14,10 @@ import thanosIcon from "../Assets/thanos-icon.png";
 import hammerIcon from "../Assets/hammer-icon.png";
 import grootIcon from "../Assets/groot-icon.png";
 import antmanIcon from "../Assets/antman-icon.png";
+import drstrangeIcon from "../Assets/drstrange-icon.png";
+import lokiIcon from "../Assets/loki-icon.png";
 
-export default function Level3() {
+export default function Level4() {
   const colors = [
     { background: `url(${deadpoolIcon}) maroon` },
     { background: `url(${hulkIcon}) lime` },
@@ -29,11 +31,13 @@ export default function Level3() {
     { background: `url(${hammerIcon}) silver` },
     { background: `url(${grootIcon}) olivedrab` },
     { background: `url(${antmanIcon}) powderblue` },
+    { background: `url(${drstrangeIcon}) violet` },
+    { background: `url(${lokiIcon}) lightgreen` },
   ];
 
   return (
     <div className="game">
-      <RenderCards colors={colors} cardClass="card-lvl3" cardsClass="cards-lvl3" currentLevel={3} />
+      <RenderCards colors={colors} cardClass="card-lvl4" cardsClass="cards-lvl4" currentLevel={4} />
     </div>
   );
 }

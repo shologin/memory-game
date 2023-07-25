@@ -105,7 +105,7 @@ export default function RenderCards({ colors, cardClass, cardsClass, currentLeve
       <div className="game-level-heading">
         <h2>Level {currentLevel}</h2>
         <div>
-          <h2>{numOfMoves} moves</h2>
+          <h2>{numOfMoves === 1 ? `${numOfMoves} move` : `${numOfMoves} moves`}</h2>
           {bestScore && <h4 className="game-best-score">Best {bestScore}</h4>}
         </div>
       </div>
