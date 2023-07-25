@@ -8,6 +8,7 @@ import Level4 from "./levels/Level4";
 import Level5 from "./levels/Level5";
 import Level6 from "./levels/Level6";
 import FinalPage from "./components/FinalPage";
+import StatsPage from "./components/StatsPage";
 import Page404 from "./components/Page404";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="level-5" element={<Level5 />} />
             <Route path="level-6" element={<Level6 />} />
             <Route path="end" element={<FinalPage />} />
+            <Route path="stats" element={<StatsPage />} />
             <Route path="*" element={<Page404 />} />
           </Routes>
         </main>

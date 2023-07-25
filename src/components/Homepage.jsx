@@ -18,6 +18,7 @@ export default function Homepage() {
         <li>The game starts with all the cards face down and player turn over two cards.</li>
         <li>If two cards have the same picture, they remain revealed, otherwise they turn face down again.</li>
         <li>The goal is to reveal all the cards in as little as possible moves. </li>
+        <li>You can check your hightest records in the stats page. Click the 🏆 icon on the top of the page.</li>
         <li>Don't cheat!</li>
       </ul>
       <button className="homepage-button" onClick={() => navigate("/level-1")}>

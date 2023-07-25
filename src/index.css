@@ -37,16 +37,20 @@ h5 {
   color: #f9fafb;
 }
 
-.header-clear-stats {
+.header-logo {
+  margin-left: 20px;
+}
+
+.header-stats-link {
   display: flex;
   align-items: center;
   gap: 3px;
-  margin-right: 10px;
+  margin-right: 20px;
   cursor: pointer;
   font-size: large;
 }
 
-.header-clear-stats:hover {
+.header-stats-link:hover {
   text-decoration: underline;
   color: #a3a3a3;
 }
