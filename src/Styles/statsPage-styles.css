@@ -6,6 +6,16 @@
   margin-top: 30px;
 }
 
+.stats-page-dummy {
+  text-align: center;
+  margin-top: 40px;
+  font-style: italic;
+}
+
+.stats-page-dummy p {
+  color: #a3a3a3;
+}
+
 .stats-page-list {
   width: 90%;
   box-shadow: 2px 4px 15px rgb(56, 56, 56);

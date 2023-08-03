@@ -55,7 +55,7 @@ export default function RenderCards({ colors, cardClass, cardsClass, currentLeve
           dispatch(moveMade());
 
           if (revealedCount === cardsCount) {
-            dispatch(moveSet(`Level-${currentLevel}`));
+            dispatch(moveSet(`lvl-${currentLevel}`));
             if (!isLastLevel) {
               alert(`Level passed. Welcome to the level ${nextLevel}`);
               navigate(`/level-${nextLevel}`);
